@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Stock Data</title>
+  <link rel="stylesheet" href="real_time.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <div class="logo-header">
+        <img
+          src="images\toxx-high-resolution-logo-homepage.png"
+          alt="Logo"
+          width="140px"
+          height="99px"
+        />
+        <div class="header">
+          <div class="Navbar">
+            <li class="nav-item Home"><a href="index.html">Home</a></li>
+            <li class="nav-item Portfolio">
+              <a href="Portfolio.html" onclick="displayMessage()">Portfolio</a>
+            </li>
+            <li class="nav-item Realtime"><a href="real_time.html">Live-Stock</a></li>
+            <li class="nav-item News"><a href="news.html">News</a></li>
+            <li class="nav-item Contact Us">
+              <a href="Contact_Us.html">Contact Us</a>
+            </li>
+            <li class="nav-item Login">
+              <a href="login.html" class="login-button">Login/Signup</a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <br><br>
+
+  <h1>Real-Time Stock Data</h1>
+  
+  <label for="symbol">Enter Stock Symbol:</label>
+  <input type="text" id="symbol" placeholder="e.g., AAPL" />
+  <button onclick="getStockData()">Get Stock Data</button>
+
+  <div id="stock-info"></div>
+
+  <script>
+    // Function to fetch and display stock data
+    async function getStockData() {
+      const symbol = document.getElementById('symbol').value;
+      const stockInfoDiv = document.getElementById('stock-info');
+
+      if (!symbol) {
+        stockInfoDiv.innerHTML = 'Please enter a stock symbol!';
+        return;
+      }
+
+      try {
+        // Fetch stock data from the backend API using the full URL
+        const response = await fetch(`http://localhost:3000/api/stock/${symbol}`);
+        
+        // Log response for debugging
+        console.log('Response:', response);
+
+        const data = await response.json();
+        
+        // Log data for debugging
+        console.log('Data:', data);
+
+        if (response.ok) {
+          // Display the stock data on the page
+          stockInfoDiv.innerHTML = `
+            <div class="stock-item">Symbol: ${data.symbol}</div>
+            <div class="stock-item">Price: $${data.price}</div>
+            <div class="stock-item">Change: $${data.change}</div>
+            <div class="stock-item">Percent Change: ${data.percentChange}%</div>
+            <div class="stock-item">Day High: $${data.dayHigh}</div>
+            <div class="stock-item">Day Low: $${data.dayLow}</div>
+          `;
+        } else {
+          stockInfoDiv.innerHTML = 'Error fetching stock data.';
+        }
+      } catch (error) {
+        stockInfoDiv.innerHTML = 'Failed to fetch stock data.';
+        console.error('Fetch error:', error);
+      }
+    }
+  </script>
+
+</body>
+</html>

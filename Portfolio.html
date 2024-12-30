@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="./images/toxx-high-resolution-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Portfolio.css" />
+    <script src="events.js"></script>
+  </head>
+
+  <body>
+    <div class="logo-header">
+      <img src="images/toxx-high-resolution-logo-homepage.png" alt="Logo" width="140px" height="99px" />
+      <div class="header">
+        <div class="Navbar">
+          <li class="nav-item Home"><a href="index.html">Home</a></li>
+          <li class="nav-item Portfolio">
+            <a href="Portfolio.html" onclick="displayMessage()">Portfolio</a>
+          </li>
+          <li class="nav-item Realtime"><a href="real_time.html">Live-Stock</a></li>
+          <li class="nav-item News"><a href="news.html">News</a></li>
+          <li class="nav-item Contact Us"><a href="Contact_Us.html">Contact Us</a></li>
+          <li class="nav-item Login"><a href="login.html" class="login-button">Login/Signup</a></li>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-hero">
+      <!-- company list -->
+      <table>
+        <tr>
+          <th>Company</th>
+          <th>Market Cap (cr)</th>
+          <th>Loss/Gain</th>
+          <th>Market Value</th>
+        </tr>
+        <tr>
+          <td>ICICI</td>
+          <td>₹7,55,682</td>
+          <td><img src="./images/graph2.png" class="profit" /></td>
+          <td>
+            ₹1109.40
+            <br />
+            <span class="actions">
+              <label for="icici-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="icici-buy-counter" value="0" readonly />
+              <label for="icici-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="icici-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('icici')">Buy</button>
+              <button class="sell" onclick="sellShares('icici')">Sell</button>
+              <button class="undo" onclick="undoAction('icici')">Undo</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Reliance</td>
+          <td>₹19,09,736</td>
+          <td><img src="./images/graph2.png" class="loss" /></td>
+          <td>
+            ₹2959.65
+            <br />
+            <span class="actions">
+              <label for="reliance-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="reliance-buy-counter" value="0" readonly />
+              <label for="reliance-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="reliance-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('reliance')">Buy</button>
+              <button class="sell" onclick="sellShares('reliance')">Sell</button>
+              <button class="undo" onclick="undoAction('reliance')">Undo</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Infosys</td>
+          <td>₹6,14,682</td>
+          <td><img src="./images/graph.png" class="profit" /></td>
+          <td>
+            ₹1506.80
+            <br />
+            <span class="actions">
+              <label for="infosys-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="infosys-buy-counter" value="0" readonly />
+              <label for="infosys-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="infosys-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('infosys')">Buy</button>
+              <button class="sell" onclick="sellShares('infosys')">Sell</button>
+              <button class="undo" onclick="undoAction('infosys')">Undo</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Wipro</td>
+          <td>₹2,55,557</td>
+          <td><img src="./images/graph.png" class="loss" /></td>
+          <td>
+            ₹477.30
+            <br />
+            <span class="actions">
+              <label for="wipro-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="wipro-buy-counter" value="0" readonly />
+              <label for="wipro-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="wipro-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('wipro')">Buy</button>
+              <button class="sell" onclick="sellShares('wipro')">Sell</button>
+              <button class="undo" onclick="undoAction('wipro')">Undo</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Axis Bank</td>
+          <td>₹3,88,225</td>
+          <td><img src="./images/graph.png" class="profit" /></td>
+          <td>
+            ₹1087.80
+            <br />
+            <span class="actions">
+              <label for="axis-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="axis-buy-counter" value="0" readonly />
+              <label for="axis-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="axis-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('axis')">Buy</button>
+              <button class="sell" onclick="sellShares('axis')">Sell</button>
+              <button class="undo" onclick="undoAction('axis')">Undo</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>SBI</td>
+          <td>₹6,88,682</td>
+          <td><img src="./images/graph.png" class="loss" /></td>
+          <td>
+            ₹779.05
+            <br />
+            <span class="actions">
+              <label for="sbi-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="sbi-buy-counter" value="0" readonly />
+              <label for="sbi-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="sbi-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('sbi')">Buy</button>
+              <button class="sell" onclick="sellShares('sbi')">Sell</button>
+              <button class="undo" onclick="undoAction('sbi')">Undo</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Jio Financial</td>
+          <td>₹6,31,682</td>
+          <td><img src="./images/graph.png" class="profit" /></td>
+          <td>
+            ₹1550.09
+            <br />
+            <span class="actions">
+              <label for="jio-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="jio-buy-counter" value="0" readonly />
+              <label for="jio-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="jio-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('jio')">Buy</button>
+              <button class="sell" onclick="sellShares('jio')">Sell</button>
+              <button class="undo" onclick="undoAction('jio')">Undo</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Tata Tech</td>
+          <td>₹40,006</td>
+          <td><img src="./images/graph.png" class="loss" /></td>
+          <td>
+            ₹420.50
+            <br />
+            <span class="actions">
+              <label for="tata-buy-counter">Bought: </label>
+              <input type="number" class="share-counter" id="tata-buy-counter" value="0" readonly />
+              <label for="tata-sell-counter">Sold: </label>
+              <input type="number" class="share-counter" id="tata-sell-counter" value="0" readonly />
+              <br />
+              <button class="buy" onclick="buyShares('tata')">Buy</button>
+              <button class="sell" onclick="sellShares('tata')">Sell</button>
+              <button class="undo" onclick="undoAction('tata')">Undo</button>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <section class="footer">
+      <!-- Footer content -->
+    </section>
+
+    <script>
+      const lastAction = {}; // To track the last action for each company (buy/sell)
+
+      function buyShares(company) {
+        const buyCounter = document.getElementById(`${company}-buy-counter`);
+        const currentBuyCount = parseInt(buyCounter.value);
+        buyCounter.value = currentBuyCount + 1;
+        lastAction[company] = 'buy';
+      }
+
+      function sellShares(company) {
+        const sellCounter = document.getElementById(`${company}-sell-counter`);
+        const currentSellCount = parseInt(sellCounter.value);
+        sellCounter.value = currentSellCount + 1;
+        lastAction[company] = 'sell';
+      }
+
+      function undoAction(company) {
+        const buyCounter = document.getElementById(`${company}-buy-counter`);
+        const sellCounter = document.getElementById(`${company}-sell-counter`);
+        const currentBuyCount = parseInt(buyCounter.value);
+        const currentSellCount = parseInt(sellCounter.value);
+
+        if (lastAction[company] === 'buy' && currentBuyCount > 0) {
+          buyCounter.value = currentBuyCount - 1;
+        } else if (lastAction[company] === 'sell' && currentSellCount > 0) {
+          sellCounter.value = currentSellCount - 1;
+        }
+
+        // Clear the last action after undo
+        lastAction[company] = null;
+      }
+    </script>
+    
+    <div class="pagination p12">
+       <ul>  
+          <a href="#"><li>Previous</li></a>
+          <a class="is-active" href="#"><li>1</li></a>
+          <a href="#"><li>2</li></a>
+          <a href="#"><li>3</li></a>
+          <a href="#"><li>4</li></a>
+          <a href="#"><li>5</li></a>
+          <a href="#"><li>6</li></a>
+          <a href="#"><li>Next</li></a>
+        </ul>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul class="links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Collection</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="links">
+            <li>
+              <a
+                href="https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calculator"
+                target="_blank"
+                >Income Tax Calculator</a
+              >
+            </li>
+            <li><a href="#">Stoxx Digest</a></li>
+            <li><a href="#">Glossary</a></li>
+            <li><a href="#">Open Demat Account</a></li>
+            <li><a href="#">Calculator</a></li>
+            <li><a href="#">New Uploads</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Media Kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose of news, updates,
+            helpful tips, and exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

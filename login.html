@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo-header">
+      <img
+        src="images\toxx-high-resolution-logo-homepage.png"
+        alt="Logo"
+        width="140px"
+        height="99px"
+      />
+      <div class="header">
+        <!-- <div class="Navbar">
+          
+          <li class="nav-item Home"><a href="index.html">Home</a></li>
+          <li class="nav-item Portfolio">
+            <a href="Portfolio.html" onclick="displayMessage()">Portfolio</a>
+          </li>
+          <li class="nav-item News"><a href="news.html">News</a></li>
+          <li class="nav-item Contact Us">
+            <a href="Contact_Us.html">Contact Us</a>
+          </li>
+          <li class="nav-item Login">
+            <a href="login.html" class="login-button">Login/Signup</a>
+          </li>
+        </div> -->
+      </div>
+    </div>
+    <div class="form">
+      <div class="form-toggle"></div>
+      <div class="form-panel one">
+        <div class="form-header">
+          <h1>Account Login</h1>
+        </div>
+        <div class="form-content">
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+              <a class="form-recovery" href="#">Forgot Password?</a>
+            </div>
+            <div class="form-group">
+              <a href="#" class="login-link" onclick="showCredentials(event)"
+                >Log In</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="form-panel two">
+        <div class="form-header">
+          <h1>Register Account</h1>
+        </div>
+        <div class="form-content">
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+              <label for="cpassword">Confirm Password</label>
+              <input type="password" id="cpassword" name="cpassword" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="register-link">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

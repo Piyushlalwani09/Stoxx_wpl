@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Contact_Us.css" />
+  </head>
+  <body>
+    <div class="logo-header">
+      <img
+        src="images\toxx-high-resolution-logo-homepage.png"
+        alt="Logo"
+        width="140px"
+        height="99px"
+      />
+      <div class="header">
+        <div class="Navbar">
+          <li class="nav-item Home"><a href="index.html">Home</a></li>
+          <li class="nav-item Portfolio">
+            <a href="Portfolio.html" onclick="displayMessage()">Portfolio</a>
+          </li>
+          <li class="nav-item Realtime"><a href="real_time.html">Live-Stock</a></li>
+          <li class="nav-item News"><a href="news.html">News</a></li>
+          <li class="nav-item Contact Us">
+            <a href="Contact_Us.html">Contact Us</a>
+          </li>
+          <li class="nav-item Login">
+            <a href="login.html" class="login-button">Login/Signup</a>
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <strong
+      ><h1 style="text-align: left; font-size: 40px">Feedback Form</h1></strong
+    >
+    <form name="form">
+      <label for="name">Name :</label><br />
+      <input
+        type="text"
+        id="Name"
+        name="Name"
+        placeholder="Enter Full Name"
+        required
+      /><br /><br />
+      <label for="email">Email Address :</label><br />
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="Enter Email address"
+        required
+      /><br /><br />
+      <label for="phone">Phone Number :</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Enter Phone number"
+        required
+      /><br /><br />
+      <label for="gender">Gender :</label><br />
+      <input type="radio" id="male" name="gender" value="Male" required />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="Female" required />
+      <label for="female">Female</label><br /><br />
+      <label for="Reference">How did you get to know about us :</label><br />
+      <input
+        type="checkbox"
+        id="Newspaper"
+        name="Newspaper"
+        value="Newspaper"
+        required
+      />
+      <label for="Newspaper"> Newspaper</label><br />
+      <input
+        type="checkbox"
+        id="Social Media"
+        name="Social Media"
+        value="Social Media"
+        required
+      />
+      <label for="Social Media">Social Media</label><br />
+      <input
+        type="checkbox"
+        id="Word of mouth"
+        name="Word of mouth"
+        value="Word of mouth"
+        required
+      />
+      <label for="Word of mouth"> Word of mouth</label><br />
+      <input
+        type="checkbox"
+        id="Others"
+        name="Others"
+        value="Others"
+        
+      />
+      <label for="Others"> Others </label><br /><br />
+      <label for="suggestions">Suggestions :</label><br />
+      <textarea
+        id="suggestions"
+        name="suggestions"
+        rows="10"
+        cols="50"
+        placeholder="Enter your suggestions here"
+        required
+      ></textarea
+      ><br /><br />
+      <input type="submit" id="submitButton" name="Submit" value="Submit" />
+    </form>
+    <div id="response"></div>
+   <script src="Contact_Us.js"></script>
+  </body>
+</html>

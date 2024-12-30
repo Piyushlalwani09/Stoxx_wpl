@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/toxx-high-resolution-logo.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/chart.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="news.css" />
+    <script src="news.js"></script>
+  </head>
+  <body>
+    <div class="logo-header">
+      <img src="images\toxx-high-resolution-logo-homepage.png" alt="Logo" width="140px" height="99px" />
+      <div class="header">
+          <div class="Navbar">
+              <li class="nav-item Home"><a href="index.html">Home</a></li>
+              <li class="nav-item Portfolio" ><a href="Portfolio.html" onclick="displayMessage()">Portfolio</a></li>
+              <li class="nav-item Realtime"><a href="real_time.html">Live-Stock</a></li>
+              <li class="nav-item News"><a href="#">News</a></li>
+              <li class="nav-item Contact Us"><a href="Contact_Us.html">Contact Us</a></li>
+              <li class="nav-item Login">
+                <a href="login.html" class="login-button">Login/Signup</a>
+              </li>
+          </div>
+      </div>
+  </div>
+
+    <div class="gainers-losers-container">
+      <table class="gainers-losers-table">
+        <thead>
+          <tr class="title">
+            <th colspan="2">Top Gainers</th>
+          </tr>
+          <tr>
+            <th>Company</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody id="gainersLosersBody">
+          <tr>
+            <td>ITC</td>
+            <td class="green-value">436.90<br />2.49%</td>
+          </tr>
+          <tr class="spacer-row">
+            <td colspan="2"></td>
+          </tr>
+          <!-- Spacer row -->
+
+          <tr>
+            <td>Kotak Mahindra Bank</td>
+            <td class="green-value">1825.10<br />2.40%</td>
+          </tr>
+          <tr class="spacer-row">
+            <td colspan="2"></td>
+          </tr>
+          <!-- Spacer row -->
+          <tr>
+            <td>Bharti Airtel</td>
+            <td class="green-value">1229.30<br />2.11%</td>
+          </tr>
+          <tr class="spacer-row">
+            <td colspan="2"></td>
+          </tr>
+          <!-- Spacer row -->
+          <tr>
+            <td>State Bank of India</td>
+            <td class="green-value">779.00<br />1.94%</td>
+          </tr>
+          <tr class="spacer-row">
+            <td colspan="2"></td>
+          </tr>
+          <!-- Spacer row -->
+          <tr>
+            <td>Asian Paints</td>
+            <td class="green-value">2896.10<br />1.36%</td>
+          </tr>
+          <tr class="spacer-row">
+            <td colspan="2"></td>
+          </tr>
+          <!-- Spacer row -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="news-hero">
+      <table class="stock-news-table">
+        <thead>
+          <tr>
+            <th>Stock News</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="white-bg">
+            <td>
+              <div class="news-content">
+                <div class="news-details">
+                  <h3>
+                    World markets today: S&P 500, Nasdaq up, Dow Jones down
+                    after fresh inflation data.
+                  </h3>
+                  <p>
+                    US equities were mixed on Thursday, paring early gains after
+                    softer producer prices data eased concerns about high
+                    interest rates. European stocks were also mixed after the
+                    European Central Bank held its key rate steady.
+                  </p>
+                  <span class="live-date-time" id="liveDate"
+                    >Live Date and Time</span
+                  >
+                </div>
+                <div class="news-actions">
+                  <img
+                    src="C:\stox_mpl\images\news_1.png"
+                    alt="Stock Image"
+                    class="stock-image"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="white-bg">
+            <td>
+              <div class="news-content">
+                <div class="news-details">
+                  <h3>
+                    Google-parent Alphabet fast approaches $2 trillion-mark in
+                    m-cap on AI-fueled rally after Apple, Microsoft, Nvidia.
+                  </h3>
+                  <p>
+                    Shares of Google's parent company Alphabet is heading back
+                    toward what would be a record $2 trillion market value — a
+                    milestone surpassed only by Microsoft Corp., Apple Inc. and
+                    Nvidia Corp. in the United States. It has rallied back from
+                    last month’s low, when the shares dropped on concerns that
+                    the tech leader was falling behind in artificial
+                    intelligence (AI), according to a Bloomberg report.
+                  </p>
+                  <span class="live-date-time" id="liveDate"
+                    >Live Date and Time</span
+                  >
+                </div>
+                <div class="news-actions">
+                  <img
+                    src="C:\stox_mpl\images\news_2.png"
+                    alt="Stock Image"
+                    class="stock-image"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="white-bg">
+            <td>
+              <div class="news-content">
+                <div class="news-details">
+                  <h3>
+                    Indian stock market: Gift Nifty indicates gap-down opening
+                    on April 12 after US inflation dispels Fed rate cut hopes.
+                  </h3>
+                  <p>
+                    The Indian stock market is likely to open lower tomorrow
+                    (April 12, 2024) following the release of March inflation
+                    data in the US, which exceeded Wall Street expectations.
+                    This outcome has diminished hopes for a rate cut by the US
+                    Federal Reserve in June. Many analysts anticipate a bearish
+                    trend in tomorrow's market due to concerns about global
+                    economic uncertainties and volatility stemming from the
+                    release of January-March quarter results for fiscal 2023-24
+                    (Q4FY24).
+                  </p>
+                  <span class="live-date-time" id="liveDate2"
+                    >Live Date and Time</span
+                  >
+                </div>
+                <div class="news-actions">
+                  <img
+                    src="C:\stox_mpl\images\news_3.png"
+                    alt="Stock Image"
+                    class="stock-image"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr class="white-bg">
+            <td>
+              <div class="news-content">
+                <div class="news-details">
+                  <h3>
+                    Vijay Kedia portfolio: Ace investor books profit in
+                    multibagger stock Patel Engineering after 300% rise in one
+                    year.
+                  </h3>
+                  <p>
+                    Vijay Kedia portfolio: Indian stock market investor Vijay
+                    Kedia booked some profit in Patel Engineering in the March
+                    quarter of the previous financial year, according to data
+                    available with exchanges.According to shareholding pattern
+                    data of Patel Engineering for the March quarter of FY24,
+                    Kedia Securities Private Limited held 1,20,00,000 shares, or
+                    1.55 per cent stake, in the company.
+                  </p>
+                  <span class="live-date-time" id="liveDate2"
+                    >Live Date and Time</span
+                  >
+                </div>
+                <div class="news-actions">
+                  <img
+                    src="C:\stox_mpl\images\news_4.png"
+                    alt="Stock Image"
+                    class="stock-image"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="white-bg">
+            <td>
+              <div class="news-content">
+                <div class="news-details">
+                  <h3>
+                    Market marginally overvalued, timing of rate cut pivotal,
+                    says Vinod Nair of Geojit.
+                  </h3>
+                  <p>
+                    Despite global uncertainties, the stock market has
+                    maintained a steady upward trajectory, solidifying its
+                    global prominence. Hitting record highs over 20 times just
+                    in 2024 YTD (year-to-date), the benchmark Nifty has jumped
+                    4.7 percent in this period.He further pointed out that the
+                    timing and extent of future interest rate cuts will play a
+                    pivotal role in shaping stock momentum for the remainder of
+                    the year.
+                  </p>
+                  <span class="live-date-time" id="liveDate2"
+                    >Live Date and Time</span
+                  >
+                </div>
+                <div class="news-actions">
+                  <img
+                    src="C:\stox_mpl\images\news_5.png"
+                    alt="Stock Image"
+                    class="stock-image"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
